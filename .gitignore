@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.pyc
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Environment / secrets
+.env
+
+# PyTorch model files
+*.pth
+*.pt
+
+# OS files
+.DS_Store
+Thumbs.db
