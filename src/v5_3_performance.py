@@ -1,4 +1,4 @@
-"""v5.3_FullCoolingPerformance- corrected
+"""v5.3_FullCoolingPerformance
 
 Tests the optimized cooling channel design from v5.2 under chamber
 and throat conditions to see how the design performs.
