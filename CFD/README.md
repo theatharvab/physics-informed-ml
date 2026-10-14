@@ -69,7 +69,7 @@ The documented chamber-wall temperature results are:
 
 Reported runtimes were approximately 11.1 s, 263 s, and 8206.8 s, respectively. Runtime depends on the machine and execution setup, so these are observations from the runs, not universal performance estimates.
 
-The fine-mesh temperature is about 1.63% higher than the medium-mesh temperature. This means the current results have **not demonstrated mesh independence**. A more complete study should report convergence histories and wall (y^+), use a suitable near-wall treatment, and estimate discretization uncertainty, for example with a Grid Convergence Index when its assumptions are satisfied.
+The fine-mesh temperature is about 1.63% higher than the medium-mesh temperature. This means the current results have **not demonstrated mesh independence**. A more complete study should report convergence histories and wall y-plus, use a suitable near-wall treatment, and estimate discretization uncertainty, for example with a Grid Convergence Index when its assumptions are satisfied.
 
 ## Current thermal comparison
 
@@ -96,7 +96,7 @@ The CFD heat load and the heat load used in the physics model are not currently 
 The main limitations I am working to address are:
 
 - **Mesh independence has not been established.** The wall temperature still changes between the medium and fine chamber meshes.
-- **Near-wall resolution needs checking.** Earlier estimates of (y^+) varied substantially across meshes, so the wall treatment and mesh need to be considered together.
+- **Near-wall resolution needs checking.** Earlier estimates of y-plus varied substantially across meshes, so the wall treatment and mesh need to be considered together.
 - **The models may not predict the same wall temperature.** The CFD temperature is associated with the modeled coolant-side wall, while the physics model may report a hot-gas-side wall temperature. The wall-temperature difference across the solid should be accounted for before comparing them.
 - **The heat loads are not yet fully reconciled.** The current chamber CFD heat load is approximately 16.4 kW, while the physics-model energy balance was reported at approximately 39.9 kW.
 - **Methane properties are constant.** The predicted mid-throat outlet temperature makes a temperature- and pressure-dependent property model an important next step.
@@ -108,7 +108,7 @@ These limitations do not make the current work useless. They define what the cur
 ## Next steps
 
 1. Recover and publish the exact OpenFOAM case dictionaries and mesh-generation setup used for each reported run.
-2. Record residual histories, convergence of monitored quantities, and final (y^+) values.
+2. Record residual histories, convergence of monitored quantities, and final y-plus values.
 3. Extend the mesh study and estimate discretization uncertainty.
 4. Compare CFD and the physics model using the same temperature definition, geometry, and heat load.
 5. Check coolant pressure drop against an independent estimate, including a Darcy–Weisbach calculation.
