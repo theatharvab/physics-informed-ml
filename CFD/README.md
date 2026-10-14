@@ -18,7 +18,7 @@ The current model does **not** include a complete combustion-gas domain or conju
 - **ParaView** for visualization and post-processing
 - **Ubuntu/WSL** as the OpenFOAM environment
 
-The solver used for the documented runs was `foamRun -solver fluid`, with a (k\text{-}\varepsilon) turbulence model. A previous attempt to use (k\text{-}\omega) SST did not complete because of a thermophysical-transport configuration issue. A wall-resolved SST study is still planned.
+The solver used for the documented runs was `foamRun -solver fluid`, with a k-epsilon turbulence model. A previous attempt to use k-omega SST did not complete because of a thermophysical-transport configuration issue. A wall-resolved SST study is still planned.
 
 ## Geometry and operating assumptions
 
@@ -55,7 +55,7 @@ These values are assumptions in the current model, not a temperature- and pressu
 
 The documented setup uses a coolant inlet temperature of 115 K, a prescribed pressure reference at the outlet, no-slip channel walls, and an imposed heat flux on the heated wall. The outlet pressure value of 100 kPa is a numerical reference in the current setup, not a claim about the engine's actual coolant operating pressure.
 
-The turbulence setup uses (k\text{-}\varepsilon) with wall functions and a turbulent Prandtl number of 0.85. The current runs used a single-block structured mesh. The exact case dictionaries and final boundary-condition files should be checked against the original simulation folders before attempting to reproduce these runs. I do not want the README to imply that an unverified case configuration is already reproducible.
+The turbulence setup uses k-epsilon with wall functions and a turbulent Prandtl number of 0.85. The current runs used a single-block structured mesh. The exact case dictionaries and final boundary-condition files should be checked against the original simulation folders before attempting to reproduce these runs. I do not want the README to imply that an unverified case configuration is already reproducible.
 
 ## Chamber mesh study
 
